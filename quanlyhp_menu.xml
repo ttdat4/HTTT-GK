@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+	<!--quanlyhp Menu-->
+		<menuitem id="quanlyhp_parent" name="Quản lý học phần" icon="STOCK_OPEN"/>
+		<menuitem id="menu_quanlyhp_parent" name="Tính năng Học phần" parent="quanlyhp_parent"/>
+		<menuitem action="action_quanlyhp" id="menu_quanlyhp_quanlyhp" parent="menu_quanlyhp_parent" string="Result"/>
+		<menuitem action="action_quanlyhp_tree" name="Danh sách học phần" id="menu_quanlyhp_tree" parent="menu_quanlyhp_parent" string="List of quanlyhps"/>
+		
+		<menuitem id="menu_quanlyhp_parent1" name="Tính năng Lớp học phần" parent="quanlyhp_parent"/>
+
+		<menuitem action="action_quanlyhp1" id="menu_quanlyhp_quanlyhp1" parent="menu_quanlyhp_parent1" string="Result"/>
+		<menuitem action="action_quanlyhp_tree1" name="Danh sách lớp học" id="menu_quanlyhp_tree1" parent="menu_quanlyhp_parent1" string="List of quanlyhps"/> -->
+		
+	</data>
+</openerp>

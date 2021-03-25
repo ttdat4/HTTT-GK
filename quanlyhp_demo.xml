@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data noupdate="1">
+		<!--quanlyhps-->
+		<record id="quanlyhp_01" model="quanlyhp.quanlyhp">
+			<field name="name">Dế mèn phiêu lưu ký</field>
+			<field name="sotinchi">2</field>
+			<field name="hocphantienquyet">Lập trình cơ bản</field>
+		</record>
+		
+	</data>
+</openerp>

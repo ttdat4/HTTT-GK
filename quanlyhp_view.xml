@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+	<!--quanlyhp search view-->
+		<record model="ir.ui.view" id="view_quanlyhp_search">
+			<field name="name">quanlyhp.search</field>
+			<field name="model">quanlyhp.quanlyhp</field>
+			<field name="type">search</field>
+			<field name="arch" type="xml">
+				<search string="quanlyhp Information Search">
+					<field name="name" string="quanlyhp Name"/>
+					<field name="sotinchi" string="quanlyhp Genre"/>
+					<!--<field name="hocphantienquyet"/>-->
+				</search>
+			</field>
+		</record>
+		
+	<!--quanlyhp tree view-->
+		<record model="ir.ui.view" id="view_quanlyhp_tree">
+			<field name="name">quanlyhp.tree</field>
+			<field name="model">quanlyhp.quanlyhp</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Danh sách học phần">
+					<field name="name"/>
+					<field name="sotinchi"/>
+					
+					<field name="tienquyet"/>
+				</tree>
+			</field>
+		</record>
+	
+	<!--quanlyhp form view-->
+		<record model="ir.ui.view" id="view_quanlyhp_form">
+			<field name="name">quanlyhp.form</field>
+			<field name="model">quanlyhp.quanlyhp</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="quanlyhp">
+					<group>
+						<group>
+							<field name="name" string="Học phần"/>			
+						</group>
+						<group>
+							<field name="sotinchi" string="Số tín chỉ"/>
+						</group>
+						<!-- <field name="hocphantienquyet" string="hocphantienquyet"/> -->
+						<notebook colspan="4">
+							<page string="Học phần tiên quyết">
+								<field name="tienquyet" string="Học phần tiên quyết"/>
+							</page>
+						</notebook>
+					</group>
+				</form>
+			</field>
+		</record>
+		
+	<!--quanlyhp Action-->
+		 <record model="ir.actions.act_window" id="action_quanlyhp">
+            <field name="name">Thông tin chi tiết</field>
+            <field name="res_model">quanlyhp.quanlyhp</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+		
+		 <record model="ir.actions.act_window" id="action_quanlyhp_tree">
+            <field name="name">Danh sách học phần</field>
+            <field name="res_model">quanlyhp.quanlyhp</field>
+            <field name="view_type">tree</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+		<!--========================================-->
+
+		
+	<!--quanlyhp tree view-->
+		 <record model="ir.ui.view" id="view_quanlyhp_tree1">
+			<field name="name">lophocphan.tree1</field>
+			<field name="model">quanlyhp.lophocphan</field>
+			<field name="type">tree</field>
+			<field name="arch" type="xml">
+				<tree string="Lớp học phần">
+					<field name="malophocphan"/>
+					<field name="tenhocphan"/> 
+					<field name="giangvien"/>
+					<field name="ngaybatdau"/>
+					<field name="ngayketthuc"/>
+					<field name="thongtin"/>
+				</tree>
+			</field>
+		</record>
+	 
+	<!--quanlyhp form view-->
+		<record model="ir.ui.view" id="view_quanlyhp_form1">
+			<field name="name">lophocphan.form1</field>
+			<field name="model">quanlyhp.lophocphan</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Lớp học phần">
+					<group>
+						<group colspan="2">
+							<field name="malophocphan" string="Mã lớp học"/>
+						</group>
+						
+						<group>
+							<field name="tenhocphan" string="Tên học phần"/> 
+							<field name="giangvien" string="Giảng viên"/>
+						</group>
+
+						<group>
+							<field name="ngaybatdau" string="Ngày bắt đầu"/>
+							<field name="ngayketthuc" string="Ngày kết thúc"/>
+						</group>
+					</group>
+					<notebook colspan="4">
+						<page  string="Thông tin">
+							<field  name="thongtin"  placeholder="Mô tả về môn học"/>
+						</page>
+					</notebook>
+				</form>
+			</field>
+		</record>
+		
+	<!--quanlyhp Action-->
+		  <record model="ir.actions.act_window" id="action_quanlyhp1">
+            <field name="name">Thông tin chi tiết</field>
+            <field name="res_model">quanlyhp.lophocphan</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record> 
+		
+		 <record model="ir.actions.act_window" id="action_quanlyhp_tree1">
+            <field name="name">Danh sách lớp học</field>
+            <field name="res_model">quanlyhp.lophocphan</field>
+            <field name="view_type">tree</field>
+            <field name="view_mode">tree</field>
+        </record> 
+		
+	</data>
+</openerp>
